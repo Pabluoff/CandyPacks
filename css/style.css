@@ -152,7 +152,7 @@ main {
         height: 90px; /* Altura do footer-nav */
         background-color: #000;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 100; /* Garantir que o footer esteja acima do conteúdo */
+        z-index: 1; /* Para garantir que o footer apareça acima do vídeo */
     }
 
     .footer-nav ion-icon {
@@ -180,20 +180,23 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding-bottom: 0; /* Removendo o padding do main */
+        padding-bottom: 80px;
         height: auto;
     }
 
     .video-container {
+        position: absolute; /* Torna o video-container independente do fluxo normal */
+        top: 0;
+        left: 0;
         width: 100%;
         max-width: 400px;
+        height: calc(100vh - 90px); /* Ajusta a altura para o limite superior do footer */
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
         overflow: hidden;
-        position: relative;
-        height: calc(100vh - 90px); /* Ajuste a altura do container para não ultrapassar o footer */
-        margin-bottom: 90px; /* Adicionando o mesmo valor do footer para evitar sobreposição */
+        z-index: 0; /* Coloca o vídeo abaixo do footer */
     }
+
 }
 
 /* Barra "Para você" */
