@@ -6,10 +6,10 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #111;
+    background-color: #000000;
     color: #fff;
     overflow-x: hidden;
-    padding-top: 60px; /* Ajuste o espaço para compensar o header fixo */
+    padding-top: 60px;
 }
 
 header {
@@ -23,7 +23,7 @@ header {
     padding: 10px 20px;
     background-color: #000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    z-index: 1000; /* Garantir que o header fique acima de outros elementos */
+    z-index: 1000;
 }
 
 header .logo {
@@ -76,7 +76,7 @@ main {
 
 .controls {
     position: absolute;
-    bottom: 10px;
+    bottom: 30px;
     right: 10px;
     display: flex;
     flex-direction: column;
@@ -85,7 +85,7 @@ main {
 }
 
 .controls ion-icon {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #ffffff;
     cursor: pointer;
     transition: transform 0.2s;
@@ -97,8 +97,8 @@ main {
 
 /* Substituir o perfil por uma imagem */
 .profile-icon img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 2px solid #ff69b4;
     box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
@@ -161,7 +161,8 @@ main {
         margin-bottom: 30px;
     }
 
-    header .menu, .logo{
+    header .menu,
+    .logo {
         display: none;
     }
 
@@ -191,7 +192,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-       padding-bottom: 80px;
+        padding-bottom: 80px;
     }
 
     main {
@@ -199,7 +200,7 @@ main {
     }
 
     .video-container {
-        height: 100%;
+        height: calc(100vh - 120px);
     }
 
 
@@ -207,13 +208,45 @@ main {
         position: relative;
         width: 100%;
         max-width: 400px;
-        height: calc(100vh - 90px);
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
         overflow: hidden;
     }
 
 }
+
+/* Barra "Para você" */
+.video-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    z-index: 2;
+    padding: 10px 0;
+}
+
+.video-header .tab {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.video-header .tab.active {
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.video-header .tab:hover {
+    color: #d5d5d5;
+}
+
 
 
 @media screen and (min-width: 769px) {
@@ -247,4 +280,3 @@ main {
         opacity: 0;
     }
 }
-
