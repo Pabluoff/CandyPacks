@@ -186,7 +186,7 @@ main {
     .video-container {
         width: 100%;
         max-width: 400px;
-        height: 80vh; /* Alterado para deixar um espaço abaixo */
+        height: 70vh; /* Alterado para deixar um espaço abaixo */
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
         overflow: hidden;
