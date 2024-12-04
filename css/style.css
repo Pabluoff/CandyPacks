@@ -190,21 +190,23 @@ main {
         justify-content: center;
         padding-bottom: 80px;
         height: auto; /* Ajuste para garantir o comportamento correto */
+        flex-grow: 1; /* Garante que o main ocupe o máximo de espaço disponível */
     }
 
     .video-container {
         position: absolute;
         top: 0;
-        left: 0;
+        left: 50%; /* Centraliza horizontalmente */
+        transform: translateX(-50%); /* Compensa a largura do elemento para centralizar */
         width: 100%;
-        max-width: 400px;
+        max-width: 400px; /* Largura máxima */
         height: calc(100% - 90px); /* Calcula a altura total menos o footer-nav */
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
         z-index: 1;
     }
-}
 
+}
 
 
 /* Barra "Para você" */
@@ -266,6 +268,7 @@ main {
     font-size: 3rem;
     color: #ff5454;
     animation: heartAnimation 1s ease-out forwards;
+    z-index: 99;
 }
 
 @keyframes heartAnimation {
