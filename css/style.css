@@ -282,3 +282,108 @@ main {
         opacity: 0;
     }
 }
+
+/* Modal de Compartilhamento */
+#share-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro semitransparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 80%;
+    max-width: 380px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombras suaves */
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #b5b5b5;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.share-options button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #323232;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.share-options button:hover {
+    background-color: #4e4e4e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.share-options button ion-icon {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+/* Estilo do Alert */
+.alert {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.alert-visible {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.alert:before {
+    content: '✔';
+    margin-right: 10px;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: rgb(172, 193, 167);
+}
+
+.alert:after:hover {
+    color: #ff0000;
+}
