@@ -149,10 +149,10 @@ main {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 90px; /* Altura do footer-nav */
+        height: 90px;
         background-color: #000;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 1; /* Para garantir que o footer apareça acima do vídeo */
+        z-index: 10; /* Garante que o footer esteja sobre o conteúdo */
     }
 
     .footer-nav ion-icon {
@@ -185,16 +185,12 @@ main {
     }
 
     .video-container {
-        position: absolute; /* Torna o video-container independente do fluxo normal */
-        top: 0;
-        left: 0;
         width: 100%;
         max-width: 400px;
-        height: calc(100vh - 90px); /* Ajusta a altura para o limite superior do footer */
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
         overflow: hidden;
-        z-index: 0; /* Coloca o vídeo abaixo do footer */
+        height: calc(100vh - 90px); /* Calcula a altura subtraindo a altura do footer-nav */
     }
 
 }
