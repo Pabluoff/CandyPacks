@@ -147,7 +147,6 @@ main {
         display: flex;
         flex-direction: column;
         height: 100vh; /* Garante que o body não ultrapasse a altura da tela */
-        overflow: hidden;
     }
 
     .footer-nav {
@@ -171,6 +170,28 @@ main {
         margin-bottom: 30px;
     }
 
+    header .menu,
+    .logo {
+        display: none;
+    }
+
+    header {
+        display: none;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 80px;
+        height: auto; /* Ajuste para garantir o comportamento correto */
+    }
+
     .video-container {
         position: absolute;
         top: 0;
@@ -183,22 +204,9 @@ main {
         overflow: hidden;
         z-index: 1;
     }
-
-    .video-container video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-bottom: 80px;
-        height: auto;
-    }
 }
+
+
 
 /* Barra "Para você" */
 .video-header {
