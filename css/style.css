@@ -141,6 +141,14 @@ main {
 
 
 @media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh; /* Garante que o body não ultrapasse a altura da tela */
+    }
+
     .footer-nav {
         display: flex;
         justify-content: space-around;
@@ -149,10 +157,10 @@ main {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 90px;
+        height: 90px; /* Altura do footer */
         background-color: #000;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 10; /* Garante que o footer esteja sobre o conteúdo */
+        z-index: 2;
     }
 
     .footer-nav ion-icon {
@@ -171,8 +179,10 @@ main {
         display: none;
     }
 
-    body {
-        padding-top: 0;
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     main {
