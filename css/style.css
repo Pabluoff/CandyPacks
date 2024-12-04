@@ -207,7 +207,7 @@ main {
 
 .video-header {
     position: fixed;
-    top: 22px;
+    top:  16px;
     left: 0;
     width: 100%;
     display: flex;
@@ -412,7 +412,7 @@ main {
     padding: 10px 15px;
     background: #1a1a1a;
     color: white;
-    font-size: 18px;
+    font-size: 14px;
     border-bottom: 1px solid #333;
 }
 
