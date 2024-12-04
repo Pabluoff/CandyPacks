@@ -147,6 +147,7 @@ main {
         display: flex;
         flex-direction: column;
         height: 100vh; /* Garante que o body não ultrapasse a altura da tela */
+        overflow: hidden;
     }
 
     .footer-nav {
