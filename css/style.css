@@ -10,6 +10,7 @@ body {
     color: #fff;
     overflow-x: hidden;
     padding-top: 60px;
+    overflow: hidden;
 }
 
 header {
@@ -217,7 +218,7 @@ main {
 
 /* Barra "Para você" */
 .video-header {
-    position: absolute;
+    position: fixed; /* Alterado de absolute para fixed */
     top: 0;
     left: 0;
     width: 100%;
@@ -227,6 +228,18 @@ main {
     background: transparent;
     z-index: 2;
     padding: 10px 0;
+}
+
+@media screen and (min-width: 769px) {
+    .video-header {
+        position: fixed; /* Mantém fixo no desktop */
+        top: 60px; /* Coloca acima do vídeo */
+        z-index: 999; /* Abaixo do header principal */
+    }
+    
+    .video-container {
+        margin-top: 20px; /* Ajusta o espaço para acomodar o header */
+    }
 }
 
 .video-header .tab {
