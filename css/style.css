@@ -106,10 +106,6 @@ main {
     margin-bottom: 7px;
 }
 
-.profile-icon img:hover {
-    transform: scale(1.1);
-}
-
 .sidebar {
     position: absolute;
     left: 10px;
@@ -227,7 +223,7 @@ main {
     color: #ffffff99;
     margin: 0 15px;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .video-header .tab.active {
@@ -237,6 +233,7 @@ main {
 
 .video-header .tab:hover {
     color: #ffffff7e;
+    border-color: #ffffff7e;
 }
 
 @media screen and (min-width: 769px) {
