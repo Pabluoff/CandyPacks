@@ -235,18 +235,33 @@ main {
     }
 }
 
+.video-header {
+    display: flex;
+    justify-content: center; /* Centraliza as abas */
+    align-items: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0); /* Fundo sutil */
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 .video-header .tab {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Tamanho um pouco maior */
     color: rgba(255, 255, 255, 0.7);
-    margin: 0 15px;
+    margin: 0 20px;
+    padding-bottom: 5px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
+    position: relative; /* Necessário para o efeito de borda */
 }
 
 .video-header .tab.active {
     font-weight: bold;
     color: #fff;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 3px solid #fff; /* Borda mais grossa para o item ativo */
 }
 
 .video-header .tab:hover {
