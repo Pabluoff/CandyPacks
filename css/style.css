@@ -161,15 +161,22 @@ main {
         margin-bottom: 30px;
     }
 
-    header .menu {
+    header .menu, .logo{
         display: none;
     }
+
+    header {
+        display: none;
+    }
+
+    body {
+        padding-top: 0;
+    }
+
 
     .video-container {
         width: 100%;
         max-width: none;
-        height: 100%;
-        /* Preenche a altura total */
         border-radius: 0;
     }
 
@@ -184,10 +191,17 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: calc(100vh - 90px);
-        /* Ajusta a altura para o footer */
-        padding-bottom: 80px;
+=        padding-bottom: 80px;
     }
+
+    main {
+        height: 100vh; /* Preencher a viewport no mobile */
+    }
+
+    .video-container {
+        height: 100vh; /* Garantir o preenchimento total */
+    }
+
 
     .video-container {
         position: relative;
