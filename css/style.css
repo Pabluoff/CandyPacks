@@ -375,15 +375,3 @@ main {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
-
-.alert:before {
-    content: '✔';
-    margin-right: 10px;
-    font-size: 1.5rem;
-    vertical-align: middle;
-    color: rgb(172, 193, 167);
-}
-
-.alert:after:hover {
-    color: #ff0000;
-}
