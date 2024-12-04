@@ -209,18 +209,34 @@ main {
 }
 
 
-/* Barra "Para você" */
 .video-header {
-    position: fixed; /* Alterado de absolute para fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
-    z-index: 2;
     padding: 10px 0;
+    z-index: 999;
+}
+
+.video-header .tab {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff99;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.video-header .tab.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.video-header .tab:hover {
+    color: #ffffff7e;
 }
 
 @media screen and (min-width: 769px) {
@@ -234,40 +250,6 @@ main {
         margin-top: 20px; /* Ajusta o espaço para acomodar o header */
     }
 }
-
-.video-header {
-    display: flex;
-    justify-content: center; /* Centraliza as abas */
-    align-items: center;
-    padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0); /* Fundo sutil */
-    position: sticky; /* Torna o cabeçalho fixo ao rolar */
-    top: 0; /* Fixa no topo da tela */
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-
-.video-header .tab {
-    font-size: 1.1rem; /* Tamanho um pouco maior */
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0 20px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    transition: color 0.3s, border-bottom 0.3s;
-    position: relative; /* Necessário para o efeito de borda */
-}
-
-.video-header .tab.active {
-    font-weight: bold;
-    color: #fff;
-    border-bottom: 3px solid #fff; /* Borda mais grossa para o item ativo */
-}
-
-.video-header .tab:hover {
-    color: #d5d5d5;
-}
-
 
 
 @media screen and (min-width: 769px) {
