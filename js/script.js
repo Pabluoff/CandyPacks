@@ -98,25 +98,27 @@ document.addEventListener("DOMContentLoaded", () => {
     // Criação do modal de compartilhamento
     const shareModal = document.createElement("div");
     shareModal.id = "share-modal";
-    shareModal.innerHTML = ` 
+    shareModal.innerHTML = `
         <div class="modal-overlay"></div>
         <div class="modal-content">
             <h3>Compartilhar</h3>
             <div class="share-options">
                 <button id="copy-link"><ion-icon name="copy"></ion-icon>Copiar Link</button>
-                <button id="share-twitter"><ion-icon name="logo-twitter"></ion-icon>Twitter</button>
+                <button id="share-x"><i class="fa-brands fa-x-twitter"></i>X (Twitter)</button> <!-- Ícone do X do Twitter -->
                 <button id="share-facebook"><ion-icon name="logo-facebook"></ion-icon>Facebook</button>
                 <button id="share-whatsapp"><ion-icon name="logo-whatsapp"></ion-icon>WhatsApp</button>
             </div>
+            <button id="close-modal" class="close-modal">✖</button> <!-- Botão de Fechar -->
         </div>
     `;
     document.body.appendChild(shareModal);
 
     const modalOverlay = shareModal.querySelector(".modal-overlay");
     const copyLinkButton = shareModal.querySelector("#copy-link");
-    const twitterButton = shareModal.querySelector("#share-twitter");
+    const xButton = shareModal.querySelector("#share-x");
     const facebookButton = shareModal.querySelector("#share-facebook");
     const whatsappButton = shareModal.querySelector("#share-whatsapp");
+    const closeModalButton = shareModal.querySelector("#close-modal");
 
     // Função para abrir o modal
     const openModal = () => {
@@ -150,6 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Eventos
     shareIcon.addEventListener("click", openModal);
     modalOverlay.addEventListener("click", closeModal);
+    closeModalButton.addEventListener("click", closeModal); // Fechar modal com o botão "X"
 
     // Função para copiar o link
     copyLinkButton.addEventListener("click", () => {
@@ -159,10 +162,10 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModal();
     });
 
-    // Função para compartilhar no Twitter
-    twitterButton.addEventListener("click", () => {
-        const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`;
-        window.open(twitterUrl, "_blank");
+    // Função para compartilhar no X
+    xButton.addEventListener("click", () => {
+        const xUrl = `https://x.com/intent/tweet?url=${encodeURIComponent(window.location.href)}`; // Substituído URL do Twitter por "X"
+        window.open(xUrl, "_blank");
         closeModal();
     });
 
