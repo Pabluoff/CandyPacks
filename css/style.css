@@ -158,14 +158,35 @@ main {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         z-index: 2;
     }
-
+    
     .footer-nav ion-icon {
         font-size: 1.8rem;
         color: #fff;
         cursor: pointer;
         margin-bottom: 30px;
     }
-
+    
+    .icon-wrapper {
+        position: relative;
+        margin-bottom: -10px;
+        
+    }
+    
+    .notification-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: rgb(255, 45, 45);
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 2px 7px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+    
+    
     header .menu,
     .logo {
         display: none;

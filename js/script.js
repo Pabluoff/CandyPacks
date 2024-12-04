@@ -205,3 +205,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Seleciona o badge
+    const notificationBadge = document.querySelector(".notification-badge");
+
+    // Oculta o badge inicialmente
+    notificationBadge.style.display = "none";
+
+    // Exibe o badge após 15 segundos
+    setTimeout(() => {
+        notificationBadge.style.display = "block";
+    }, 15000); // 15.000 ms = 15 segundos
+});
