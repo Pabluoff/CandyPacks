@@ -191,15 +191,15 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-=        padding-bottom: 80px;
+       padding-bottom: 80px;
     }
 
     main {
-        height: 100vh; /* Preencher a viewport no mobile */
+        height: 100%;
     }
 
     .video-container {
-        height: 100vh; /* Garantir o preenchimento total */
+        height: 100%;
     }
 
 
