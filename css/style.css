@@ -201,7 +201,6 @@ main {
         height: calc(100% - 90px); /* Calcula a altura total menos o footer-nav */
         background: rgba(255, 255, 255, 0.1);
         border-radius: 0;
-        overflow: hidden;
         z-index: 1;
     }
 }
