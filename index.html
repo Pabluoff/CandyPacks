@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -37,6 +37,8 @@
                 </div>
                 <ion-icon name="heart" id="heart-icon-video"></ion-icon>
                 <span class="likes-count" id="likes-video">113k</span>
+                <ion-icon name="chatbubble-ellipses" id="comment-icon"></ion-icon> 
+                <span class="likes-count" id="likes-video">12k</span>
                 <ion-icon name="arrow-redo" id="share-icon"></ion-icon>
                 <span class="likes-count" id="likes-video">28k</span>
             </div>
@@ -46,7 +48,21 @@
             </div>
         </div>
     </main>
-    
+    <div class="comments-modal" id="comments-modal">
+        <div class="modal-header">
+          <h2>Comentários</h2>
+          <ion-icon name="close-outline" id="close-comments-modal"></ion-icon>
+        </div>
+        <div class="modal-body">
+          <div class="comments-disabled">
+            <div class="lock-icon">
+              <ion-icon name="lock-closed-outline"></ion-icon>
+            </div>
+            <p>Você não é assinante</p>
+          </div>
+        </div>
+      </div>
+          
     <div class="footer-nav">
         <ion-icon name="home"></ion-icon>
         <ion-icon name="search-outline"></ion-icon>

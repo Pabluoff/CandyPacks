@@ -183,3 +183,25 @@ document.addEventListener("DOMContentLoaded", () => {
         closeModal();
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const commentsModal = document.getElementById("comments-modal");
+    const closeCommentsModal = document.getElementById("close-comments-modal");
+
+    // Mostrar o modal (adapte este evento conforme necessário)
+    document.querySelector("#comment-icon").addEventListener("click", () => {
+        commentsModal.style.display = "block";
+    });
+
+    // Fechar o modal
+    closeCommentsModal.addEventListener("click", () => {
+        commentsModal.style.display = "none";
+    });
+
+    // Fechar o modal ao clicar fora
+    window.addEventListener("click", (event) => {
+        if (event.target === commentsModal) {
+            commentsModal.style.display = "none";
+        }
+    });
+});
