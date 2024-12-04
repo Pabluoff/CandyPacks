@@ -241,8 +241,8 @@ main {
     align-items: center;
     padding: 10px 0;
     background-color: rgba(0, 0, 0, 0); /* Fundo sutil */
-    position: fixed; /* Fixa o header no topo */
-    top: 0;
+    position: sticky; /* Torna o cabeçalho fixo ao rolar */
+    top: 0; /* Fixa no topo da tela */
     left: 0;
     width: 100%;
     z-index: 10;
