@@ -207,7 +207,7 @@ main {
 
 .video-header {
     position: fixed;
-    top: 0;
+    top: 22px;
     left: 0;
     width: 100%;
     display: flex;
@@ -239,8 +239,9 @@ main {
 @media screen and (min-width: 769px) {
     .video-header {
         position: fixed; /* Mantém fixo no desktop */
-        top: 60px; /* Coloca acima do vídeo */
+        top: 50px; /* Coloca acima do vídeo */
         z-index: 999; /* Abaixo do header principal */
+        background: #000;
     }
     
     .video-container {
